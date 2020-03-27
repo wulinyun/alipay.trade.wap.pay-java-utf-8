@@ -28,6 +28,24 @@
   </head>
   <body>
 <%
+	/**
+	 * return_url:charset=UTF-8
+	 * return_url:out_trade_no=202032717520632
+	 * return_url:method=alipay.trade.wap.pay.return
+	 * return_url:total_amount=0.01
+	 * return_url:sign=fUJ3UBG66/N3r16nBykE3v/M2C1wTq+OnH8HQq3nMpJuJBXZiCDQ61A6oNmWEQVQSJgy7d8PQWeMULoHtN1C4i8IYO8j1WDY7Wmx2f26XfqOgKMMcPxRQxAKM1k3z23js5hzvZboo6/cZL
+	 * Ir/3weN74Kt7Spc/Wmpc8YdnNM92VnxLQfYJ3X5vWfitB0i5GAK6riwhz1YHk6AEo6nFYP53E5mTb+McD5qLozyKl6hQVkAFL948ZIOuuv3ZZcx1/8ylHojDhdoQlwdIorTH41ve7q0xQ2yrdVIMPNYhMYcUgerr3qEcSBZwbE/qb8Fojv/AfwUqyfAsla/sgGFCM1Gg==
+	 * return_url:trade_no=2020032722001452341437024925
+	 * return_url:auth_app_id=2021001146601279
+	 * return_url:version=1.0
+	 * return_url:app_id=2021001146601279
+	 * return_url:sign_type=RSA2
+	 * return_url:seller_id=2088731909746398
+	 * return_url:timestamp=2020-03-27 17:05:33
+	 * return_url:out_trade_no=202032717520632
+	 * return_url:trade_no=2020032722001452341437024925
+	 * return_url:verify_result=true
+	 */
 	//获取支付宝GET过来反馈信息
 	Map<String,String> params = new HashMap<String,String>();
 	Map requestParams = request.getParameterMap();
@@ -41,7 +59,7 @@
 		}
 		//乱码解决，这段代码在出现乱码时使用。如果mysign和sign不相等也可以使用这段代码转化
 		valueStr = new String(valueStr.getBytes("ISO-8859-1"), "utf-8");
-		System.out.println("return_url:name="+valueStr);
+		System.out.println("return_url:"+name+"="+valueStr);
 		params.put(name, valueStr);
 	}
 	

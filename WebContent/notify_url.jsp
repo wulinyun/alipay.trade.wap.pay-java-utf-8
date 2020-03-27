@@ -5,6 +5,12 @@
 <%@ page import="com.alipay.config.*"%>
 <%@ page import="com.alipay.api.*"%>
 <%
+	/**
+	 * out_trade_no:202032717520632
+	 * trade_no:2020032722001452341437024925
+	 * trade_status:TRADE_SUCCESS
+	 * verify_result:true
+	 */
 	//获取支付宝POST过来反馈信息
 	Map<String,String> params = new HashMap<String,String>();
 	Map requestParams = request.getParameterMap();
