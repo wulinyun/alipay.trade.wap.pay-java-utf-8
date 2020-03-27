@@ -6,10 +6,69 @@
 <%@ page import="com.alipay.api.*"%>
 <%
 	/**
-	 * out_trade_no:202032717520632
-	 * trade_no:2020032722001452341437024925
-	 * trade_status:TRADE_SUCCESS
-	 * verify_result:true
+	 * 支付成功
+	 * notify_url:gmt_create=2020-03-27 18:12:45
+	 * notify_url:charset=UTF-8
+	 * notify_url:seller_email=linyun.wu@sagesoft.cn
+	 * notify_url:subject=手机网站支付测试商品
+	 * notify_url:sign=B/oD/2cOmuqOQf4R7yQf3s/0Yps8gQ6Hi7o+K0IhOhjgAMXTaCaNC2cz+Emd4tvTbPgbwJwluGLWadcoALJFmAjRGGAfNX4huZ0uyXnrQQgLO4wCkQOra4z0Rjl6Q6AzYBH0OFVui/GDZm
+	 * VEVYAqVsCiAnwCASj8jLVOrw3OZoK/0eoKHmHZj+EQSL5YgCu/rjLRsgYterNJvLJAdLQzxkBbnfeW0HlbNZJWu87x29sv6lqnXdipw5T8T2nQffvd39T1wVZoWXvKVzaM30tSSzOmVS+Xb397sLKHNEcuAy1GAfKCiGcD6x8LvxHJZlBOBkthdRbxRccFPDgk4hvOOw==notify_url:body=购买测试商品0.01元
+	 * notify_url:buyer_id=2088312718052342
+	 * notify_url:invoice_amount=0.01
+	 * notify_url:notify_id=2020032700222181246052341404336738
+	 * notify_url:fund_bill_list=[{"amount":"0.01","fundChannel":"ALIPAYACCOUNT"}]
+	 * notify_url:notify_type=trade_status_sync
+	 * notify_url:trade_status=TRADE_SUCCESS
+	 * notify_url:receipt_amount=0.01
+	 * notify_url:buyer_pay_amount=0.01
+	 * notify_url:app_id=2021001146601279
+	 * notify_url:sign_type=RSA2
+	 * notify_url:seller_id=2088731909746398
+	 * notify_url:gmt_payment=2020-03-27 18:12:46
+	 * notify_url:notify_time=2020-03-27 18:12:46
+	 * notify_url:version=1.0
+	 * notify_url:out_trade_no=2020327181224259
+	 * notify_url:total_amount=0.01
+	 * notify_url:trade_no=2020032722001452341437284085
+	 * notify_url:auth_app_id=2021001146601279
+	 * notify_url:buyer_logon_id=147***@qq.com
+	 * notify_url:point_amount=0.00
+	 * notify_url:out_trade_no=2020327181224259
+	 * notify_url:trade_no=2020032722001452341437284085
+	 * notify_url:trade_status=TRADE_SUCCESS
+	 * notify_url:verify_result=true
+	 *
+	 * 退款成功
+	 * notify_url:gmt_create=2020-03-27 18:12:45
+	 * notify_url:charset=UTF-8
+	 * notify_url:seller_email=linyun.wu@sagesoft.cn
+	 * notify_url:subject=手机网站支付测试商品
+	 * notify_url:sign=kNJ0ajY7eT6WRv/Pi/gNkhqP+iRtnroFrBnYORfJhwbYcQXqj4nAhiC90vFDFIQy56kG35Z4fogS5y6hc+9aXzWC0F+ngu+Zh0KA+cj535+9XznOOCa0nRaIqVnCgRDMyHpZ+92LrixbIK
+	 * EXCucLA5S5GuVeTsO5MPHlN4f/aHKwfuvUrMw8sIse11VlF2Mh9yUOOIw8U1KPX0ONRSgMXCrQ+pEmOGi/nU0JhE4/F6v7PgpRe3QN4uujJxXqpbShfygEchE1iGig9jDALJW9b5S6Uwfmixxw0FnFeVmT/FErz1eO64mIzoga6izYyMFdL/hVIu6bAeE7N9i0siPjyw==
+	 * notify_url:body=购买测试商品0.01元
+	 * notify_url:buyer_id=2088312718052342
+	 * notify_url:notify_id=2020032700222181915052341404297126
+	 * notify_url:notify_type=trade_status_sync
+	 * notify_url:trade_status=TRADE_CLOSED
+	 * notify_url:app_id=2021001146601279
+	 * notify_url:sign_type=RSA2
+	 * notify_url:seller_id=2088731909746398
+	 * notify_url:gmt_payment=2020-03-27 18:12:46
+	 * notify_url:notify_time=2020-03-27 18:19:15
+	 * notify_url:gmt_refund=2020-03-27 18:19:15.143
+	 * notify_url:out_biz_no=2020032722001452341437284085
+	 * notify_url:version=1.0
+	 * notify_url:out_trade_no=2020327181224259
+	 * notify_url:total_amount=0.01
+	 * notify_url:refund_fee=0.01
+	 * notify_url:trade_no=2020032722001452341437284085
+	 * notify_url:auth_app_id=2021001146601279
+	 * notify_url:buyer_logon_id=147***@qq.com
+	 * notify_url:gmt_close=2020-03-27 18:19:15
+	 * notify_url:out_trade_no=2020327181224259
+	 * notify_url:trade_no=2020032722001452341437284085
+	 * notify_url:trade_status=TRADE_CLOSED
+	 * notify_url:verify_result=true
 	 */
 	//获取支付宝POST过来反馈信息
 	Map<String,String> params = new HashMap<String,String>();
