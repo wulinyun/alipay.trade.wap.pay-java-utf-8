@@ -24,25 +24,26 @@
 		}
 		//乱码解决，这段代码在出现乱码时使用。如果mysign和sign不相等也可以使用这段代码转化
 		//valueStr = new String(valueStr.getBytes("ISO-8859-1"), "gbk");
+		System.out.println("notify_url:"+name+"="+valueStr);
 		params.put(name, valueStr);
 	}
 	//获取支付宝的通知返回参数，可参考技术文档中页面跳转同步通知参数列表(以下仅供参考)//
 		//商户订单号
 
 		String out_trade_no = new String(request.getParameter("out_trade_no").getBytes("ISO-8859-1"),"UTF-8");
-		System.out.println("out_trade_no:"+out_trade_no);
+		System.out.println("notify_url:out_trade_no="+out_trade_no);
 		//支付宝交易号
 
 		String trade_no = new String(request.getParameter("trade_no").getBytes("ISO-8859-1"),"UTF-8");
-	    System.out.println("trade_no:"+trade_no);
+	    System.out.println("notify_url:trade_no="+trade_no);
 		//交易状态
 		String trade_status = new String(request.getParameter("trade_status").getBytes("ISO-8859-1"),"UTF-8");
-	    System.out.println("trade_status:"+trade_status);
+	    System.out.println("notify_url:trade_status="+trade_status);
 		//获取支付宝的通知返回参数，可参考技术文档中页面跳转同步通知参数列表(以上仅供参考)//
 		//计算得出通知验证结果
 		//boolean AlipaySignature.rsaCheckV1(Map<String, String> params, String publicKey, String charset, String sign_type)
 		boolean verify_result = AlipaySignature.rsaCheckV1(params, AlipayConfig.ALIPAY_PUBLIC_KEY, AlipayConfig.CHARSET, "RSA2");
-	    System.out.println("verify_result:"+verify_result);
+	    System.out.println("notify_url:verify_result="+verify_result);
 		if(verify_result){//验证成功
 			//////////////////////////////////////////////////////////////////////////////////////////
 			//请在这里加上商户的业务逻辑程序代码
